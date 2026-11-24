@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sagor! 🎂</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 35px 20px;
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    color: #ffd369;
+    margin-bottom: 15px;
+}
+
+.age {
+    font-size: 65px;
+    font-weight: bold;
+    color: #ff6b9d;
+    margin: 15px;
+}
+
+.description {
+    line-height: 1.8;
+    color: #e6e6e6;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.treat {
+    color: #ffd369;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 25px 0;
+    animation: pulse 1.5s infinite;
+}
+
+button {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    padding: 14px 25px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.07);
+}
+
+.gift {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    animation: appear 0.7s ease;
+}
+
+.gift img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.gift h2 {
+    color: #ffd369;
+    margin-bottom: 15px;
+}
+
+.certificate {
+    border: 3px dashed #ff6b9d;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    background: rgba(0,0,0,0.2);
+}
+
+footer {
+    margin-top: 30px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+@keyframes pulse {
+    50% { transform: scale(1.06); }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.emoji {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+/* Confetti */
+.confetti {
+    position: fixed;
+    top: -15px;
+    width: 9px;
+    height: 12px;
+    pointer-events: none;
+    z-index: 10;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
+
+@media(max-width: 480px) {
+    .container {
+        margin: 25px auto;
+        padding: 25px 15px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="emoji">🎉🎂🎈</div>
+
+    <h1>Happy Birthday!</h1>
+
+    <h2>Dear Sagor ❤️</h2>
+
+    <div class="age">17</div>
+    <h3>WELCOME TO LEVEL 17! 🎮</h3>
+
+    <div class="description">
+        Today is the birthday of a truly special person! 🥳
+
+        <br><br>
+
+        Sagor, you're one of those rare people who make
+        ordinary moments unforgettable. Your friendship,
+        kindness, crazy personality and unforgettable
+        sense of humour make you an amazing person.
+
+        <br><br>
+
+        May your 17th year bring you endless happiness,
+        unforgettable memories, success and adventures.
+
+        Keep smiling, keep shining and never stop being
+        the amazing person you are!
+
+        <br><br>
+
+        Stay blessed, legend! ❤️
+    </div>
+
+    <div class="treat">
+        ⚠️ TREAT NA DILE KHOBOR ASE! ⚠️
+    </div>
+
+    <button onclick="startConfetti()">
+        Celebrate! 🎊
+    </button>
+
+    <button onclick="showGift()">
+        🎁 OPEN YOUR SURPRISE
+    </button>
+
+    <div class="gift" id="gift1">
+        <h2>GIFT NUMBER 1 🐒</h2>
+
+        <h3>Meet Your Birthday Twin! 😂</h3>
+
+        <img
+        src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=900"
+        alt="Funny monkey portrait">
+
+        <p>
+        Scientists have confirmed that this monkey
+        has the same level of craziness as Sagor. 💀
+        </p>
+    </div>
+
+    <br>
+
+    <button onclick="showGift2()">
+        🎁 OPEN SECOND GIFT
+    </button>
+
+    <div class="gift" id="gift2">
+
+        <h2>💔 SPECIAL AWARD 💔</h2>
+
+        <div class="certificate">
+
+            <h2>OFFICIAL CERTIFICATE</h2>
+
+            <h3>🏆 SAGOR 🏆</h3>
+
+            <p style="margin:15px 0; line-height:1.8">
+
+            This certificate proudly confirms that
+
+            <br><br>
+
+            <b>SAGOR</b>
+
+            <br><br>
+
+            Has achieved the legendary status of:
+
+            <br><br>
+
+            💀 <b>PERMANENT SINGLE MEMBER</b> 💀
+
+            <br><br>
+
+            Girlfriend application: NOT FOUND ❌
+
+            <br>
+            Love life: 404 ERROR ❌
+
+            <br>
+            Romantic luck: Still loading... ⏳
+
+            <br><br>
+
+            Estimated delivery date of girlfriend:
+            <b>UNKNOWN 😂</b>
+
+            </p>
+
+            <h2>CONGRATULATIONS! 🥳</h2>
+
+        </div>
+
+        <p style="margin-top:20px">
+        Don't worry Sagor, at least your friends
+        will never leave you! 😂❤️
+        </p>
+
+    </div>
+
+    <footer>
+        Made with ❤️ and unlimited trolling.
+        <br>
+        Specially for Sagor | Birthday Edition 2026
+    </footer>
+
+</div>
+
+<script>
+
+function confetti() {
+    const colors = [
+        '#ff416c',
+        '#ffd369',
+        '#00d2ff',
+        '#7cff6b',
+        '#ffffff',
+        '#b967ff'
+    ];
+
+    for(let i = 0; i < 100; i++) {
+        const piece = document.createElement('div');
+        piece.className = 'confetti';
+
+        piece.style.left = Math.random() * 100 + 'vw';
+        piece.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+
+        piece.style.animationDuration =
+            (Math.random() * 3 + 2) + 's';
+
+        piece.style.animationDelay =
+            Math.random() * 1.5 + 's';
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => piece.remove(), 6000);
+    }
+}
+
+function startConfetti() {
+    confetti();
+}
+
+function showGift() {
+    document.getElementById('gift1').style.display = 'block';
+    confetti();
+}
+
+function showGift2() {
+    document.getElementById('gift2').style.display = 'block';
+    confetti();
+}
+
+window.onload = function() {
+    confetti();
+};
+
+</script>
+
+</body>
+</html>
